@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Planet Fact Generator</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    #fact {
+      font-size: 24px;
+      margin: 40px 0;
+      padding: 20px;
+      border: 2px solid #fff;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #ff9800;
+      color: #fff;
+    }
+    button:hover {
+      background: #ff5722;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌌 Planet Fact Generator 🌍</h1>
+  <div id="fact">Click the button to discover a planet fact!</div>
+  <button onclick="generateFact()">Generate Fact</button>
+
+  <script>
+    const facts = [
+      "Jupiter is so big that all other planets in our solar system could fit inside it.",
+      "Venus spins in the opposite direction to most planets.",
+      "A day on Mercury is longer than a year on Mercury.",
+      "There's diamond rain on Neptune and Uranus.",
+      "Earth is the densest planet in the solar system.",
+      "Saturn’s rings are made mostly of ice and dust.",
+      "Mars has the tallest volcano in the solar system — Olympus Mons.",
+      "Neptune has the strongest winds in the solar system.",
+      "Pluto was demoted to a dwarf planet in 2006.",
+      "There are more than 5,000 confirmed exoplanets outside our solar system."
+    ];
+
+    function generateFact() {
+      const randomIndex = Math.floor(Math.random() * facts.length);
+      document.getElementById("fact").innerText = facts[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
